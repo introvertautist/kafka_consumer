@@ -19,4 +19,23 @@ consumectl kafka --group<group_name> --topics<topics> [OPTIONS...]
       --oldest     Kafka consumer consume initial offset from oldest
 ```
 
-After starting, the consumer will start reading messages and will display a json representation of the Netflow package on stdout. You can also find application logs in `/var/log/consumectl.log`.
+After starting, the consumer will start reading messages and will display a json representation of the Netflow package on stdout. You can also find application logs in `/var/log/consumectl.log`.  
+
+Example of output data:
+```json
+{
+   "start":"2020-07-07T11:10:14Z",
+   "type":0,
+   "sampling":"rBUAAQ==",
+   "src_ip":"10.99.0.0",
+   "dst_ip":"10.99.0.19",
+   "bytes":1,
+   "packets":1,
+   "src_port":2103,
+   "dst_port":80,
+   "etype":2048,
+   "proto":6,
+   "src_as":0,
+   "dst_as":0
+}
+```
